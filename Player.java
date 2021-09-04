@@ -5,7 +5,8 @@ public class Player extends Deck{
     private int score;
 
     
-    public Player(String string) {
+    public Player(String name) {
+        this.name = name;
     }
 
     public void player(String inName, int inScore){
@@ -40,8 +41,11 @@ public class Player extends Deck{
         return cardValue;
     }
     
-
-    
+    public int incrementScore(int x){
+        int playerScore = 1;
+        for(int i = 0; i <= 25; i++){
+    }
+    return playerScore++;
 
     // public void describe() {
     
@@ -58,4 +62,5 @@ public class Player extends Deck{
 //  hand1.add(i)
 //}
 //}                      
+}
 }

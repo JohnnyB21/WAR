@@ -25,7 +25,7 @@ public class Card {
         }
     }
     private Suit suit;
-    private Value value;
+    Value value;
 
     public Card(Suit suit, Value value){
         this.suit = suit;
@@ -41,5 +41,52 @@ public class Card {
     }
     public String toString(){
         return this.suit + "_" + this.value;
+    }
+    public int getIntVal(Card.Value x) {
+        int intVal = 0;
+
+        switch (x) {
+            case TWO:
+                intVal = 2;
+                break;
+            case THREE:
+                intVal = 3;
+                break;
+            case FOUR:
+                intVal = 4;
+                break;
+            case FIVE:
+                intVal = 5;
+                break;
+            case SIX:
+                intVal = 6;
+                break;
+            case SEVEN:
+                intVal = 7;
+                break;
+            case EIGHT:
+                intVal = 8;
+                break;
+            case NINE:
+                intVal = 9;
+                break;
+            case TEN:
+                intVal = 10;
+                break;
+            case JACK:
+                intVal = 11;
+                break;
+            case QUEEN:
+                intVal = 12;
+                break;
+            case KING:
+                intVal = 13;
+                break;
+            case ACE:
+                intVal = 14;
+                break;
+        }
+
+        return intVal;
     }
 }

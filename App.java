@@ -1,19 +1,17 @@
-import java.util.ArrayList;
+
 
 public class App {
     public static void main(String[] args) {
-   ArrayList playerOneHand = new ArrayList<>();
-   ArrayList playerTwoHand = new ArrayList<>();
-   Player one = new Player("Bob");
-   Player two = new Player("Billy");
+//    ArrayList playerOneHand = new ArrayList<>();
+//    ArrayList playerTwoHand = new ArrayList<>();
+   String playerOne = "Josh";
+   String playerTwo = "Michael";
    Deck playerOneDeck = new Deck();
    Deck playerTwoDeck = new Deck();
 
       Deck myDeck = new Deck();
       myDeck.createDeck();
-      System.out.println(myDeck.atIndex(0)); 
-         //   myDeck.shuffle();
-       //System.out.println(myDeck);
+     
         for (int i = 0; i < 52; i++){
             if( i % 2 == 0) {
                 playerOneDeck.addToDeck(myDeck, i);
@@ -21,74 +19,54 @@ public class App {
                 playerTwoDeck.addToDeck(myDeck, i);
             }
          }
-         
-         playerOneHand.add(playerOneDeck);
-         playerTwoHand.add(playerTwoDeck);
-        //System.out.println(playerOneHand);
-         //System.out.println("Player One deck: " + playerOneDeck);
-        // System.out.println("Player Two deck: " + playerTwoDeck);
-        //  System.out.println("Player One deck: " + playerOneDeck.getHandValue(0));
-         
-        //  System.out.println("Player One deck: " + playerOneDeck.getHandValue(1));
-       
-        //  System.out.println("Player Two deck: " + playerTwoDeck.getHandValue(0));
-         
-        
-        // System.out.println(playerOneHand.get(1));   
-        // System.out.println(playerOneHand.get(2));
-    //    for(int g = 0; g <= playerOneHand.size(); g++){
-    //        System.out.println(playerOneHand.get(g));
-    //        System.out.println("---------");
-    //        System.out.println();
-    //        System.out.println("---------");
+         int playerOneWins = 0;
+         int playerTwoWins = 0;
+         int rndCnt = 1;
+        for(int i = 0; i <= 25; i++){
 
-           
-        //    if(playerOneDeck.getHandValue(g).compareTo(playerTwoDeck.getHandValue(g)) > playerTwoDeck.getHandValue(g).compareTo(playerOneDeck.getHandValue(g))) {
-        //        System.out.println("Player 1 wins round:" + g);
-               
+            System.out.println("Round: " + rndCnt);
 
-        //    } else if(playerTwoDeck.getHandValue(g).compareTo(playerOneDeck.getHandValue(g)) > playerOneDeck.getHandValue(g).compareTo(playerTwoDeck.getHandValue(g))){
-        //        System.out.println("Player 2 wins round:" + g);
-               
-        //    } else {
-        //        System.out.println("The round is tied!");
-               
-               
-        //    }
-           
-     //  }
+            System.out.println("*");
+
+            System.out.println(playerOne + "'s card: " + playerOneDeck.cards.get(i) ); //+ ", postion: " + i);
+           // System.out.println("player one card enum value: " + playerOneDeck.cards.get(i).getValue() + ", position: " + i);
+         //   System.out.println("player one card value: " + playerOneDeck.cards.get(i).getIntVal(playerOneDeck.cards.get(i).value) + ", position: " + i);
+
+            System.out.println("--------------------------------");
+
+            System.out.println(playerTwo + "'s card: " + playerTwoDeck.cards.get(i)); // + ", postion: " + i);
+         //   System.out.println("player two card enum value: " + playerTwoDeck.cards.get(i).getValue() + ", postion: " + i);
+           // System.out.println("player one card value: " + playerTwoDeck.cards.get(i).getIntVal(playerTwoDeck.cards.get(i).value) + ", postion: " + i);
+           System.out.println("--------------------------------");
+            if(playerOneDeck.cards.get(i).getIntVal(playerOneDeck.cards.get(i).getValue()) > playerTwoDeck.cards.get(i).getIntVal(playerTwoDeck.cards.get(i).getValue())){
+                System.out.println(playerOne + " wins round: " + (i + 1));
+                playerOneWins++;
+                System.out.println(playerOne + " total  23wins: " + playerOneWins);
+                
+            }else if(playerOneDeck.cards.get(i).getIntVal(playerOneDeck.cards.get(i).getValue()) == playerTwoDeck.cards.get(i).getIntVal(playerTwoDeck.cards.get(i).getValue())){
+                System.out.println("Tied game");
+            }else{
+                System.out.println(playerTwo + " wins round: " + (i + 1));
+                playerTwoWins++;
+                System.out.println(playerTwo + " total wins: " + playerTwoWins);
+            }
+            rndCnt++;
+            System.out.println();
+        }
 
 
-  
+            if(playerOneWins > playerTwoWins){
+                System.out.println(playerOne + " WINS THE WAR!!");
+            }
+            else if(playerOneWins == playerTwoWins){
+                System.out.println("The War is Tied!");
+            }
+            else{
+                System.out.println(playerTwo + " WINS THE WAR!!");
+            }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Deck playerOneHand = new Deck();
-    // Deck playerTwoHand = new Deck();
-    // Deck gameDeck = new Deck();
-    // gameDeck.shuffle();;
-    // for (int i = 0; i < 53; i++){
-    //     if( i % 2 == 0) {
-    //         playerOneHand.addToDeck(gameDeck);
-    //     } else {
-    //         playerTwoHand.addToDeck(gameDeck);
-    //     }
-    // }
-
-
-    // System.out.println(playerOneHand);
+    
 }
     
   

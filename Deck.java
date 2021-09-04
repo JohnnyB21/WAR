@@ -40,19 +40,19 @@ public class Deck {
         int Value = 0;
         for(Card card : cards){
             switch(card.getValue()){
-            case TWO : Value += 2; break;
-            case THREE : Value += 3; break;
-            case FOUR : Value += 4; break;
-            case FIVE : Value += 5; break;
-            case SIX : Value += 6; break;
-            case SEVEN : Value += 7; break;
-            case EIGHT : Value += 8; break;
-            case NINE : Value += 9; break;
-            case TEN : Value += 10; break;
-            case JACK : Value += 11; break;
-            case QUEEN : Value += 12; break;
-            case KING : Value += 13; break;
-            case ACE : Value += 14; break;
+            case TWO : Value = 2; break;
+            case THREE : Value = 3; break;
+            case FOUR : Value = 4; break;
+            case FIVE : Value = 5; break;
+            case SIX : Value = 6; break;
+            case SEVEN : Value = 7; break;
+            case EIGHT : Value = 8; break;
+            case NINE : Value = 9; break;
+            case TEN : Value = 10; break;
+            case JACK : Value = 11; break;
+            case QUEEN : Value = 12; break;
+            case KING : Value = 13; break;
+            case ACE : Value = 14; break;
         }
         
      }
@@ -75,12 +75,12 @@ public class Deck {
         return topCard.getValue();
         
     }
-    public int atIndex(int i){
-        for(i = 0; i < cards.size(); i++){
-            return i;
-        }
-        return i;
-    }
+    // public int atIndex(int i){
+    //     for(i = 0; i < cards.size(); i++){
+    //         return i;
+    //     }
+    //     return i;
+    // }
     // public int flip(int x){
     //   Deck deck = new Deck();
     //   deck.removeCard(x);
